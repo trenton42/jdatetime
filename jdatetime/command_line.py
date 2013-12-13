@@ -20,7 +20,7 @@ from jdatetime import jdatetime
 def main():
     args = sys.argv[1:]
     if not args:
-        print "{:%a %b %m %H:%M:%S %Y}".format(jdatetime.now())
+        print "{:%a %b %d %H:%M:%S %Y}".format(jdatetime.now())
         return
     for i in args:
         if i in ('-h', '--help'):
