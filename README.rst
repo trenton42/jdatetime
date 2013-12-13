@@ -16,13 +16,12 @@ Features
 Usage
 -----
 
-```python
-from jdatetime import jdatetime
+.. code-block:: python
 
-d = jdatetime.now()  # Today's date
-
-print "{:%m/%d/%Y}".format(d)
-
-# '06/40/2456'
-
-```
+    from jdatetime import jdatetime
+    
+    d = jdatetime.now()  # Today's date
+    
+    print "{:%m/%d/%Y}".format(d)
+    
+    # '06/40/2456'
