@@ -31,7 +31,12 @@ setup(
     package_dir={'jdatetime': 'jdatetime'},
     include_package_data=True,
     install_requires=[
+        'pytz',
+        'docopt'
     ],
+    entry_points = {
+        'console_scripts': ['jdate=jdatetime.command_line:main'],
+    },
     license="BSD",
     zip_safe=False,
     keywords='jdatetime',

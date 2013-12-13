@@ -76,12 +76,20 @@ class jdatetime(object):
         return self.days[self.weekday]
 
     @property
+    def _adayname(self):
+        return self.dayname[0:3]
+
+    @property
     def month(self):
         return int(math.floor(self.jdate / 100) % 10)
 
     @property
     def monthname(self):
         return self.months[self.month]
+
+    @property
+    def _amonthname(self):
+        return self.monthname[0:3]
 
     @property
     def week(self):
@@ -111,10 +119,12 @@ class jdatetime(object):
     def second(self):
         return int(math.floor(self.jdate * 1000000.0) % 100)
 
-    _fmt = {'A': 'dayname', 'w': 'weekday', 'd': '2day', 'm': '2month',
-            'y': '2year', 'Y': 'year', 'H': '2hour', 'I': '2hour',
-            'M': '2minute', 'S': '2second', 'j': 'yearday', 'U': '2week',
-            'W': '2week', 'B': 'monthname', 'o': 'ordinal'}
+    _fmt = {'a': '_adayname', 'A': 'dayname', 'w': 'weekday',
+            'd': '2day', 'm': '2month', 'y': '2year', 'Y': 'year',
+            'H': '2hour', 'I': '2hour', 'M': '2minute',
+            'S': '2second', 'j': 'yearday', 'U': '2week',
+            'W': '2week', 'b': '_amonthname', 'B': 'monthname',
+            'o': 'ordinal'}
 
     def __format__(self, fmt):
         def rep(match):
