@@ -31,8 +31,7 @@ setup(
     package_dir={'jdatetime': 'jdatetime'},
     include_package_data=True,
     install_requires=[
-        'pytz',
-        'docopt'
+        'pytz'
     ],
     entry_points = {
         'console_scripts': ['jdate=jdatetime.command_line:main'],
