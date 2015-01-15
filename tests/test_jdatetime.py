@@ -21,6 +21,9 @@ class TestJdatetime(unittest.TestCase):
     def test_something(self):
         pass
         # raise Exception("doesn't work!")
+    
+    def test_somethingelse(self):
+        pass
 
     def tearDown(self):
         pass
