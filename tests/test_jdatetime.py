@@ -19,7 +19,7 @@ class TestJdatetime(unittest.TestCase):
         pass
 
     def test_something(self):
-        pass
+        raise Exception("doesn't work!")
 
     def tearDown(self):
         pass
